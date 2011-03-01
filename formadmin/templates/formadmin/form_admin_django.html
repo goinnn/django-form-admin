@@ -1,0 +1,18 @@
+{% load i18n %}
+
+{% if form.errors %} <p class="errornote"> {% trans "Please correct the errors below." %} </p> {% endif %}
+<fieldset class="module aligned">
+{% for field in form %}
+<div class="form-row{% if field.errors %} errors{% endif %}">
+    {{ field.errors }}
+    <div>
+    {% if field.field.is_checkbox %}
+        {{ field }} <label for="{{ field.auto_id }}" {% if field.field.required %} class="required, vCheckboxLabel"{% else %}class="vCheckboxLabel"{% endif %}>{{ field.label }} </label> 
+    {% else %}
+        <label for="{{ field.auto_id }}" {% if field.field.required %} class="required"{% endif %}>{{ field.label }}: </label>{{ field }}
+    {% endif %}
+    {% if field.help_text %}<p class="help">{{ field.help_text|safe }}</p>{% endif %}
+    </div>
+</div> 
+{% endfor %}
+</fieldset>

@@ -1,0 +1,36 @@
+.. contents::
+
+=================
+Django form admin
+=================
+
+Information
+===========
+
+It is a Django application that lets to render forms like django admin, with the same HTML
+
+
+How to use it
+=============
+
+In your form:
+
+::
+    class FooForm(forms.Form, FormAdminDjango):
+        pass
+
+    class FooModelForm(forms.ModelForm, FormAdminDjango):
+        pass
+
+In your template:
+
+::
+    {{ form.as_django_admin }}
+
+Development
+===========
+
+You can get the last bleeding edge version of autoreports by doing a checkout
+of its subversion repository::
+
+  svn co https//svnpub.yaco.es/djangoapps/formadmin/trunk/formadmin
