@@ -22,7 +22,7 @@ def read(*rnames):
 
 setup(
     name="django-form-admin",
-    version="0.3",
+    version="0.3.1",
     author="Yaco Sistemas S.L.",
     author_email="pmartin@yaco.es",
     description="Abstract class implemented to provide form django admin like",
