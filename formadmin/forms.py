@@ -19,5 +19,8 @@ class FormAdminDjango(object):
     def as_django_admin(self):
         if not self.fieldsets:
             self.fieldsets = [(None, {'fields': self.fields.keys()})]
-        adminform = AdminForm(self, self.fieldsets, self.prepopulated_fields, self.readonly_fields, self.model_admin)
+        try:
+            adminform = AdminForm(self, self.fieldsets, self.prepopulated_fields, self.readonly_fields, self.model_admin)
+        except TypeError:  # To old django
+            adminform = AdminForm(self, self.fieldsets, self.prepopulated_fields)
         return render_to_string('formadmin/form_admin_django.html', {'adminform': adminform, })
