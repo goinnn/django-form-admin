@@ -29,6 +29,18 @@ In your template:
 
     {{ form.as_django_admin }}
 
+Or Now (version >= 3.1.2) you don't need inherit of FormAdminDjango
+
+::
+
+    class FooForm(forms.Form):
+        ...
+
+        def as_django_admin(self):
+            from formadmin.forms import as_django_admin
+            return as_django_admin(self)
+
+
 Development
 ===========
 
