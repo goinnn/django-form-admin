@@ -33,7 +33,7 @@ setup(
         'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)',
     ],
     license="LGPL 3",
-    keywords="django admin form render",
+    keywords="django,admin form,form admin,admin,form,render",
     url='https://tracpub.yaco.es/djangoapps/wiki/DjangoFormAdmin',
     packages=find_packages('.'),
     include_package_data=True,
