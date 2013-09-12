@@ -1,0 +1,35 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_modify formadmin_filters %}
+
+{% block extrahead %}
+    {{ block.super }}
+    {{ media }}
+    <script type="text/javascript" src="{{ STATIC_URL }}admin/js/jquery.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}admin/js/jquery.init.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}admin/js/core.js"></script>
+    <script src="/jsi18n/" type="text/javascript"></script>
+    {{ form.media }}
+{% endblock %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}admin/css/forms.css" />
+{% endblock %}
+
+{% block coltype %}
+    {% if ordered_objects %}colMS{% else %}colM{% endif %}
+{% endblock %}
+
+{% block content_title %}{{ block.super }}<p>{% trans "This view is out of django admin" %}</p>{% endblock %}
+
+{% block content %}
+    <div id="content-main">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form|as_django_admin }}
+            <div class="submit-row">
+                <input type="submit" name="submit" value="{% trans "Send Email" %}"/>
+            </div>
+        </form>
+    </div>
+{% endblock %}
