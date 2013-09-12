@@ -7,11 +7,11 @@ django-form-admin
 Information
 ===========
 
-.. image:: https://travis-ci.org/Yaco-Sistemas/django-form-admin.png?branch=master
-    :target: https://travis-ci.org/Yaco-Sistemas/django-form-admin
-
 .. image:: https://badge.fury.io/py/django-form-admin.png
     :target: https://badge.fury.io/py/django-form-admin
+
+.. image:: https://pypip.in/d/django-form-admin/badge.png
+    :target: https://pypi.python.org/pypi/django-form-admin
 
 It is a Django application that lets to render forms like django admin, with the same HTML
 
@@ -23,6 +23,9 @@ Requirements
 
 How to use it
 =============
+
+Option 1
+--------
 
 In your form:
 
@@ -40,7 +43,12 @@ In your template:
 
     {{ form.as_django_admin }}
 
+Option 2
+--------
+
 But you don't need inherit of FormAdminDjango, you may also do
+
+In your form:
 
 ::
 
@@ -50,6 +58,26 @@ But you don't need inherit of FormAdminDjango, you may also do
         def as_django_admin(self):
             from formadmin.forms import as_django_admin
             return as_django_admin(self)
+
+
+In your template:
+
+::
+
+    {{ form.as_django_admin }}
+
+
+Option 3
+--------
+
+Or even without modify the form
+
+Only in your template:
+
+::
+
+    {% load formadmin_filters %}
+    {{ form|as_django_admin }}
 
 
 Development
