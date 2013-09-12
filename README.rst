@@ -1,7 +1,7 @@
 .. contents::
 
 =================
-Django form admin
+django-form-admin
 =================
 
 Information
@@ -29,7 +29,7 @@ In your template:
 
     {{ form.as_django_admin }}
 
-Or Now (version >= 3.1.2) you don't need inherit of FormAdminDjango
+But you don't need inherit of FormAdminDjango, you may also do
 
 ::
 
@@ -44,7 +44,7 @@ Or Now (version >= 3.1.2) you don't need inherit of FormAdminDjango
 Development
 ===========
 
-You can get the last bleeding edge version of autoreports by doing a checkout
-of its subversion repository::
+You can get the bleeding edge version of django-form-admin by doing a clone
+of its git repository::
 
-  svn co http://svnpub.yaco.es/djangoapps/formadmin/trunk/formadmin
+  git clone git://github.com/Yaco-Sistemas/django-form-admin.git
