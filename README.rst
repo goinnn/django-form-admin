@@ -7,8 +7,19 @@ django-form-admin
 Information
 ===========
 
+.. image:: https://travis-ci.org/Yaco-Sistemas/django-form-admin.png?branch=master
+    :target: https://travis-ci.org/Yaco-Sistemas/django-form-admin
+
+.. image:: https://badge.fury.io/py/django-form-admin.png
+    :target: https://badge.fury.io/py/django-form-admin
+
 It is a Django application that lets to render forms like django admin, with the same HTML
 
+
+Requirements
+============
+
+ * `Django <https://www.djangoproject.com/>`_ (>= 1.0, the `example project <https://github.com/Yaco-Sistemas/django-form-admin/tree/master/example>`_ needs >=1.3)
 
 How to use it
 =============

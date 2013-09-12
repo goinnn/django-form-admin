@@ -22,7 +22,7 @@ def read(*rnames):
 
 setup(
     name="django-form-admin",
-    version="0.3.2",
+    version="0.4.0",
     author="Pablo Martin",
     author_email="goinnn@gmail.com",
     description="Abstract class implemented to provide form django admin like",
@@ -31,6 +31,8 @@ setup(
         'Development Status :: 4 - Beta',
         'Framework :: Django',
         'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 3',
     ],
     license="LGPL 3",
     keywords="django,admin form,form admin,admin,form,render",
