@@ -20,7 +20,7 @@
     {% if ordered_objects %}colMS{% else %}colM{% endif %}
 {% endblock %}
 
-{% block content_title %}{{ block.super }}<p>{% trans "This view is out of django admin" %}</p>{% endblock %}
+{% block content_title %}{{ block.super }}<p style="color:red">{% trans "This view is out of django admin" %}</p>{% endblock %}
 
 {% block content %}
     <div id="content-main">

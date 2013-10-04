@@ -82,6 +82,10 @@ TEMPLATE_LOADERS = (
 #     'django.template.loaders.eggs.Loader',
 )
 
+ALLOWED_HOSTS = [
+    'localhost',
+]
+
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -143,6 +147,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 import django
 
+if django.VERSION[0] >= 1 and django.VERSION[1] >= 4:
+    TEMPLATE_CONTEXT_PROCESSORS += ('django.core.context_processors.tz',)
+
 if django.VERSION[0] >= 1 and django.VERSION[1] >= 3:
     INSTALLED_APPS += ('django.contrib.staticfiles',)
     # Absolute path to the directory static files should be collected to.
@@ -177,7 +184,5 @@ if django.VERSION[0] >= 1 and django.VERSION[1] >= 3:
     TEMPLATE_CONTEXT_PROCESSORS += ('django.core.context_processors.static',)
 
 
-elif django.VERSION[0] >= 1 and django.VERSION[1] >= 2:
+if django.VERSION[0] >= 1 and django.VERSION[1] >= 2:
     INSTALLED_APPS += ('django.contrib.messages',)
-elif django.VERSION[0] >= 1 and django.VERSION[1] >= 1:
-    TEMPLATE_CONTEXT_PROCESSORS += ('django.core.context_processors.static',)
