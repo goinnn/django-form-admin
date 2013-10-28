@@ -1,6 +1,11 @@
 Releases
 ========
 
+0.4.2 (2013-10-28)
+------------------
+
+* Fix an error when to install this egg from pypi
+
 0.4.1 (2013-10-04)
 ------------------
 
