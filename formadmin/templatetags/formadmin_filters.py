@@ -1,4 +1,4 @@
-from django.template.base import Library
+from django.template import Library
 
 from formadmin.forms import as_django_admin as as_django_admin_func
 
