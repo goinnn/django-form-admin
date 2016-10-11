@@ -29,7 +29,7 @@ Option 1
 
 In your form:
 
-::
+.. code-block:: python
 
     class FooForm(forms.Form, FormAdminDjango):
         pass
@@ -39,7 +39,7 @@ In your form:
 
 In your template:
 
-::
+.. code-block:: html+django
 
     {{ form.as_django_admin }}
 
@@ -50,7 +50,7 @@ But you don't need inherit of FormAdminDjango, you may also do
 
 In your form:
 
-::
+.. code-block:: python
 
     class FooForm(forms.Form):
         ...
@@ -62,7 +62,7 @@ In your form:
 
 In your template:
 
-::
+.. code-block:: html+django
 
     {{ form.as_django_admin }}
 
@@ -74,7 +74,7 @@ Or even without modify the form
 
 Only in your template:
 
-::
+.. code-block:: html+django
 
     {% load formadmin_filters %}
     {{ form|as_django_admin }}
