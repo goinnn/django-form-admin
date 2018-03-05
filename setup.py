@@ -22,7 +22,7 @@ def read(*rnames):
 
 setup(
     name="django-form-admin",
-    version="0.4.2",
+    version="0.5.0",
     author="Pablo Martin",
     author_email="goinnn@gmail.com",
     description="Abstract class implemented to provide form django admin like",
@@ -36,7 +36,7 @@ setup(
     ],
     license="LGPL 3",
     keywords="django,admin form,form admin,admin,form,render",
-    url='https://github.com/Yaco-Sistemas/django-form-admin',
+    url='https://github.com/goinnn/django-form-admin',
     packages=find_packages('.'),
     include_package_data=True,
     zip_safe=False,
