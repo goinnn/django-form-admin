@@ -4,6 +4,10 @@ Releases
 ------------------
 
 * Django support > 1.8 (1.9 - 1.11)
+* Improve readme file
+* Thanks to:
+    * `bashu <https://github.com/bashu>`_
+    * `predatell <https://github.com/predatell>`_
 
 0.4.2 (2013-10-28)
 ------------------
